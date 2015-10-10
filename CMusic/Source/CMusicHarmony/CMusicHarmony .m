@@ -105,7 +105,21 @@ enum {
 }
 
 
+// Called internally from transpose, setKey:scaleForm:root:chordForm
+- (void) setHarmonicStrengthWithData: (SInt16 *) strengths andKey: (SInt16) key
+{
+    [self willChangeValueForKey:@"harmonicStrengths"];
+    @synchronized(self) {
+        _key = key;
+        for (NSUInteger i = 0; i < CMusicPitchClass_Count; i++) {
+            _harmonicStrengths[i] = strengths[i];
+        }
+    }
+    [self checkParameters];
+    [self didChangeValueForKey:@"harmonicStrengths"];
 
+    
+}
 
 
 // -----------------------------------------------------------------------------
@@ -122,8 +136,6 @@ enum {
 - (void) setKey: (CMusicPitchClass) key
 {
     [self transpose:_key - key];
-    _key = key;
-    [self checkParameters];
 }
 
 
@@ -137,14 +149,8 @@ enum {
         hs[pc] = _harmonicStrengths[newpc];
     }
     
-    [self willChangeValueForKey:@"harmonicStrengths"];
-    @synchronized(self) {
-        for (NSUInteger pc = 0; pc < CMusicPitchClass_Count; pc++) {
-            _harmonicStrengths[pc] = hs[pc];
-        }
-    }
-    // Don't check parameters, because the key isn't set yet.
-    [self didChangeValueForKey:@"harmonicStrengths"];
+    [self setHarmonicStrengthWithData:hs
+                               andKey:SInt16Mod(_key-nPCs,CMusicPitchClass_Count)];
 }
 
 
@@ -188,17 +194,7 @@ enum {
         
     }
     
-    [self willChangeValueForKey:@"harmonicStrengths"];
-    [self willChangeValueForKey:@"key"];
-    @synchronized(self) {
-        _key = newKey;
-        for (NSUInteger pc = 0; pc < CMusicPitchClass_Count; pc++) {
-            _harmonicStrengths[pc] = hs[pc];
-        }
-    }
-    [self checkParameters];
-    [self didChangeValueForKey:@"key"];
-    [self didChangeValueForKey:@"harmonicStrengths"];
+    [self setHarmonicStrengthWithData:hs andKey:newKey];
 }
 
 

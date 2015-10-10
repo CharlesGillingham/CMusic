@@ -18,10 +18,11 @@
 {
     if ([key isEqualToString:@"key"]) return [NSSet new];
     if ([key isEqualToString:@"harmonicStrengths"]) return [NSSet new];
-    
     return [NSSet setWithObject:@"harmonicStrengths"];
 }
 
+// All notifications are through keyPathsForValuesAffectingValueForKey.
+// Harmonic strengths notifies whenever it is modified.
 + (BOOL) automaticallyNotifiesObserversForKey:(NSString *)key
 {
     return NO;

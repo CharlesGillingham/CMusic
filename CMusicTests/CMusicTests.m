@@ -10,6 +10,7 @@
 #import <XCTest/XCTest.h>
 #import "CTime+Debug.h"
 #import "CTimeMap+Debug.h"
+#import "CMusicTempoMeter+Debug.h"
 #import "CMusicNote+Debug.h"
 #import "CMusicHarmony+Debug.h"
 #import "CMusicWesternHarmony+Debug.h"
@@ -22,6 +23,7 @@
 @implementation CMusicTests
 - (void) testTime1   { XCTAssert([CTimeMap test1]); }
 - (void) testTime2   { XCTAssert([CTimeMap test2]); }
+- (void) testTempoMeter {  XCTAssert([CMusicTempoMeter testTempoAndMeter]); }
 - (void) testNotes   { XCTAssert(CMusicNoteTest()); }
 - (void) testTimeMod { XCTAssert(TestCTimeModAndDiv()); }
 

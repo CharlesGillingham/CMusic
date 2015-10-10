@@ -68,14 +68,15 @@ NSArray * CMusic_Triad = nil;
            mode: (CMusicScaleMode) m
       chordRoot: (CMusicScaleDegree) cr
 {
+    // Set these before we set everything else, so that the KVC notifies with the correct values.
+    _scaleMode = m;
+    _scaleType = t;
     [self setKey:k
        scaleForm:CMusicWesternHarmony_scaleForms[t]
             mode:m
        chordRoot:cr
        chordForm:CMusic_Triad
        inversion:0];
-    _scaleMode = m;
-    _scaleType = t;
 }
 
 
