@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment version="1070" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CMusicWesternHarmonyViewController">
+            <connections>
+                <outlet property="harmonicStrengthsBox" destination="Tlm-nD-7XT" id="kEY-gU-PiS"/>
+                <outlet property="view" destination="1" id="2"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="1">
+            <rect key="frame" x="0.0" y="0.0" width="559" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="psM-6L-dqt" userLabel="Key">
+                    <rect key="frame" x="119" y="115" width="108" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="105" id="OJy-Wa-B2S"/>
+                    </constraints>
+                    <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" controlSize="mini" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="1EN-G0-gKh" id="o5J-rH-LoK">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="miniSystem"/>
+                        <menu key="menu" title="OtherViews" id="RgV-Ox-gqs">
+                            <items>
+                                <menuItem title="Item 1" state="on" id="1EN-G0-gKh"/>
+                                <menuItem title="Item 2" id="e7r-Zn-GYL"/>
+                                <menuItem title="Item 3" id="uIh-YD-kFo"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <binding destination="-2" name="selectedIndex" keyPath="self.harmony.key" previousBinding="14K-mD-7B4" id="hKC-Un-8UO">
+                            <dictionary key="options">
+                                <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
+                                <bool key="NSConditionallySetsEnabled" value="NO"/>
+                                <bool key="NSRaisesForNotApplicableKeys" value="NO"/>
+                            </dictionary>
+                        </binding>
+                        <binding destination="-2" name="content" keyPath="self.harmony.pitchClassNames" id="14K-mD-7B4"/>
+                    </connections>
+                </popUpButton>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZI1-nw-vUZ">
+                    <rect key="frame" x="20" y="119" width="93" height="11"/>
+                    <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Key" id="QxD-BX-P65">
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fLD-35-vw2">
+                    <rect key="frame" x="20" y="100" width="93" height="11"/>
+                    <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Type" id="BTS-ZV-P9G">
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kNA-ks-ghn">
+                    <rect key="frame" x="20" y="81" width="93" height="11"/>
+                    <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Mode" id="CnK-du-HZ8">
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j8k-aF-bQr">
+                    <rect key="frame" x="20" y="24" width="93" height="11"/>
+                    <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Chord Type" id="RHt-pN-6YI">
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LUx-Es-lXN">
+                    <rect key="frame" x="20" y="62" width="93" height="11"/>
+                    <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Chord Scale Degree" id="OFH-GU-MI0">
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HrU-n3-qXC">
+                    <rect key="frame" x="20" y="43" width="93" height="11"/>
+                    <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Chord Root" id="j2O-iV-8Bn">
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <box autoresizesSubviews="NO" title="Harmonic Strength for Each Pitch Class" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="Tlm-nD-7XT">
+                    <rect key="frame" x="230" y="16" width="312" height="114"/>
+                    <view key="contentView">
+                        <rect key="frame" x="1" y="1" width="310" height="101"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" metaFont="miniSystem"/>
+                </box>
+                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BbO-tQ-d29" userLabel="Scale type">
+                    <rect key="frame" x="119" y="96" width="108" height="15"/>
+                    <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" controlSize="mini" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="stL-Ie-5ba" id="wrs-AR-IiV">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="miniSystem"/>
+                        <menu key="menu" title="OtherViews" id="rjm-pF-9dw">
+                            <items>
+                                <menuItem title="Item 1" state="on" id="stL-Ie-5ba"/>
+                                <menuItem title="Item 2" id="8qU-fU-cd8"/>
+                                <menuItem title="Item 3" id="vGp-Hr-AHY"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <binding destination="-2" name="selectedIndex" keyPath="self.harmony.scaleType" previousBinding="YxM-k6-Vab" id="nh1-AN-k2W"/>
+                        <binding destination="-2" name="content" keyPath="self.harmony.scaleTypeNames" id="YxM-k6-Vab"/>
+                    </connections>
+                </popUpButton>
+                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OdF-Bq-cIU" userLabel="Scale mode">
+                    <rect key="frame" x="119" y="77" width="108" height="15"/>
+                    <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" controlSize="mini" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="2E1-uu-yBi" id="NlY-GX-lBl">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="miniSystem"/>
+                        <menu key="menu" title="OtherViews" id="RkZ-cq-hAU">
+                            <items>
+                                <menuItem title="Item 1" state="on" id="2E1-uu-yBi"/>
+                                <menuItem title="Item 2" id="fUH-Ip-5E7"/>
+                                <menuItem title="Item 3" id="OSD-1G-TGc"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <binding destination="-2" name="selectedIndex" keyPath="self.harmony.scaleMode" previousBinding="WpH-h1-loc" id="XHR-Wq-pIb">
+                            <dictionary key="options">
+                                <bool key="NSConditionallySetsEnabled" value="NO"/>
+                            </dictionary>
+                        </binding>
+                        <binding destination="-2" name="content" keyPath="self.harmony.scaleModeNames" id="WpH-h1-loc"/>
+                    </connections>
+                </popUpButton>
+                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aBI-Sd-Cvx" userLabel="Chord root scale degree">
+                    <rect key="frame" x="119" y="58" width="108" height="15"/>
+                    <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" controlSize="mini" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="3tv-a6-uJX" id="wmJ-oM-oDa">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="miniSystem"/>
+                        <menu key="menu" title="OtherViews" id="vl4-Th-tKV">
+                            <items>
+                                <menuItem title="Item 1" state="on" id="3tv-a6-uJX"/>
+                                <menuItem title="Item 2" id="IQ4-DX-NfB"/>
+                                <menuItem title="Item 3" id="5v0-f5-4Wp"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <binding destination="-2" name="content" keyPath="self.harmony.scaleDegreeNames" id="Ql1-0C-iIi"/>
+                    </connections>
+                </popUpButton>
+                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RX7-vL-25Z" userLabel="Chord root pitch class">
+                    <rect key="frame" x="119" y="39" width="108" height="15"/>
+                    <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" controlSize="mini" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="9hb-A8-hkx" id="Gxk-fY-ThO">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="miniSystem"/>
+                        <menu key="menu" title="OtherViews" id="VIM-Nn-xI9">
+                            <items>
+                                <menuItem title="Item 1" state="on" id="9hb-A8-hkx"/>
+                                <menuItem title="Item 2" id="2ir-ae-afi"/>
+                                <menuItem title="Item 3" id="ea8-Pt-3Z4"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <binding destination="-2" name="selectedIndex" keyPath="self.harmony.chordRootScaleDegree" previousBinding="run-Y9-P3p" id="7xe-xQ-2c8"/>
+                        <binding destination="-2" name="content" keyPath="self.harmony.scaleDegreePitchClassNames" id="run-Y9-P3p">
+                            <dictionary key="options">
+                                <bool key="NSRaisesForNotApplicableKeys" value="NO"/>
+                            </dictionary>
+                        </binding>
+                    </connections>
+                </popUpButton>
+                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dyS-HV-oxU" userLabel="Chord type">
+                    <rect key="frame" x="119" y="20" width="108" height="15"/>
+                    <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" controlSize="mini" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="lOr-Jd-M9h" id="9o6-e6-eQZ">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="miniSystem"/>
+                        <menu key="menu" title="OtherViews" id="G7S-om-reW">
+                            <items>
+                                <menuItem title="Item 1" state="on" id="lOr-Jd-M9h"/>
+                                <menuItem title="Item 2" id="GPv-cr-k5k"/>
+                                <menuItem title="Item 3" id="MqR-nu-khp"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <binding destination="-2" name="selectedIndex" keyPath="self.harmony.chordTypeNameIndex" previousBinding="QJf-2U-mIq" id="ZlD-1v-jVl"/>
+                        <binding destination="-2" name="content" keyPath="self.harmony.chordTypeNames" id="QJf-2U-mIq"/>
+                    </connections>
+                </popUpButton>
+            </subviews>
+            <constraints>
+                <constraint firstItem="ZI1-nw-vUZ" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="22" id="37g-G6-6sd"/>
+                <constraint firstItem="RX7-vL-25Z" firstAttribute="leading" secondItem="dyS-HV-oxU" secondAttribute="leading" id="6Ii-6f-CZP"/>
+                <constraint firstItem="j8k-aF-bQr" firstAttribute="trailing" secondItem="HrU-n3-qXC" secondAttribute="trailing" id="7Uv-5e-grZ"/>
+                <constraint firstItem="LUx-Es-lXN" firstAttribute="leading" secondItem="kNA-ks-ghn" secondAttribute="leading" id="7pw-LD-don"/>
+                <constraint firstItem="LUx-Es-lXN" firstAttribute="trailing" secondItem="HrU-n3-qXC" secondAttribute="trailing" id="Ad4-jh-xJM"/>
+                <constraint firstItem="psM-6L-dqt" firstAttribute="leading" secondItem="ZI1-nw-vUZ" secondAttribute="trailing" constant="9" id="CgR-Ay-uO3"/>
+                <constraint firstItem="Tlm-nD-7XT" firstAttribute="leading" secondItem="dyS-HV-oxU" secondAttribute="trailing" constant="8" symbolic="YES" id="Db2-AU-ycP"/>
+                <constraint firstItem="BbO-tQ-d29" firstAttribute="leading" secondItem="psM-6L-dqt" secondAttribute="leading" id="G1T-GO-7eG"/>
+                <constraint firstItem="Tlm-nD-7XT" firstAttribute="leading" secondItem="aBI-Sd-Cvx" secondAttribute="trailing" constant="8" symbolic="YES" id="Hie-FG-mVu"/>
+                <constraint firstItem="Tlm-nD-7XT" firstAttribute="leading" secondItem="psM-6L-dqt" secondAttribute="trailing" constant="8" symbolic="YES" id="JHa-qb-xfi"/>
+                <constraint firstItem="RX7-vL-25Z" firstAttribute="leading" secondItem="aBI-Sd-Cvx" secondAttribute="leading" id="JcP-vG-gZs"/>
+                <constraint firstItem="j8k-aF-bQr" firstAttribute="leading" secondItem="HrU-n3-qXC" secondAttribute="leading" id="MNM-m2-cgu"/>
+                <constraint firstItem="LUx-Es-lXN" firstAttribute="leading" secondItem="HrU-n3-qXC" secondAttribute="leading" id="Ms8-b8-ekN"/>
+                <constraint firstAttribute="trailing" secondItem="Tlm-nD-7XT" secondAttribute="trailing" constant="20" symbolic="YES" id="OA2-K9-QRO"/>
+                <constraint firstItem="Tlm-nD-7XT" firstAttribute="bottom" secondItem="dyS-HV-oxU" secondAttribute="bottom" id="OUy-c2-ntv"/>
+                <constraint firstItem="HrU-n3-qXC" firstAttribute="top" secondItem="LUx-Es-lXN" secondAttribute="bottom" constant="8" symbolic="YES" id="QV4-HQ-pGG"/>
+                <constraint firstItem="psM-6L-dqt" firstAttribute="top" secondItem="ZI1-nw-vUZ" secondAttribute="top" id="SRK-Ge-Z0X"/>
+                <constraint firstItem="kNA-ks-ghn" firstAttribute="leading" secondItem="fLD-35-vw2" secondAttribute="leading" id="SwE-HA-Maz"/>
+                <constraint firstItem="LUx-Es-lXN" firstAttribute="trailing" secondItem="kNA-ks-ghn" secondAttribute="trailing" id="VSI-Kt-yxt"/>
+                <constraint firstItem="BbO-tQ-d29" firstAttribute="top" secondItem="fLD-35-vw2" secondAttribute="top" id="ZOg-y1-qkf"/>
+                <constraint firstItem="fLD-35-vw2" firstAttribute="top" secondItem="ZI1-nw-vUZ" secondAttribute="bottom" constant="8" symbolic="YES" id="brI-nb-QHx"/>
+                <constraint firstItem="ZI1-nw-vUZ" firstAttribute="trailing" secondItem="fLD-35-vw2" secondAttribute="trailing" id="cDH-9V-4oT"/>
+                <constraint firstItem="BbO-tQ-d29" firstAttribute="leading" secondItem="OdF-Bq-cIU" secondAttribute="leading" id="dTk-Kk-xZz"/>
+                <constraint firstItem="Tlm-nD-7XT" firstAttribute="leading" secondItem="OdF-Bq-cIU" secondAttribute="trailing" constant="8" symbolic="YES" id="dky-1i-obT"/>
+                <constraint firstItem="fLD-35-vw2" firstAttribute="trailing" secondItem="kNA-ks-ghn" secondAttribute="trailing" id="dn8-j5-KcD"/>
+                <constraint firstItem="OdF-Bq-cIU" firstAttribute="top" secondItem="kNA-ks-ghn" secondAttribute="top" id="fBg-RI-hP9"/>
+                <constraint firstItem="ZI1-nw-vUZ" firstAttribute="leading" secondItem="fLD-35-vw2" secondAttribute="leading" id="h1a-q8-zdb"/>
+                <constraint firstItem="aBI-Sd-Cvx" firstAttribute="top" secondItem="LUx-Es-lXN" secondAttribute="top" id="iSx-Ya-ZTY"/>
+                <constraint firstItem="LUx-Es-lXN" firstAttribute="top" secondItem="kNA-ks-ghn" secondAttribute="bottom" constant="8" symbolic="YES" id="iTn-NH-tE5"/>
+                <constraint firstItem="Tlm-nD-7XT" firstAttribute="leading" secondItem="RX7-vL-25Z" secondAttribute="trailing" constant="8" symbolic="YES" id="irx-dM-aXJ"/>
+                <constraint firstItem="Tlm-nD-7XT" firstAttribute="top" secondItem="psM-6L-dqt" secondAttribute="top" id="j8Q-ZN-Roo"/>
+                <constraint firstItem="kNA-ks-ghn" firstAttribute="top" secondItem="fLD-35-vw2" secondAttribute="bottom" constant="8" symbolic="YES" id="jvm-t9-LfP"/>
+                <constraint firstItem="dyS-HV-oxU" firstAttribute="top" secondItem="j8k-aF-bQr" secondAttribute="top" id="mR6-2X-zyn"/>
+                <constraint firstItem="Tlm-nD-7XT" firstAttribute="leading" secondItem="BbO-tQ-d29" secondAttribute="trailing" constant="8" symbolic="YES" id="q2u-lY-CBz"/>
+                <constraint firstItem="j8k-aF-bQr" firstAttribute="top" secondItem="HrU-n3-qXC" secondAttribute="bottom" constant="8" symbolic="YES" id="siB-Fg-cli"/>
+                <constraint firstItem="ZI1-nw-vUZ" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" symbolic="YES" id="uWA-NB-X3l"/>
+                <constraint firstItem="RX7-vL-25Z" firstAttribute="top" secondItem="HrU-n3-qXC" secondAttribute="top" id="y3V-Gc-yqq"/>
+                <constraint firstItem="aBI-Sd-Cvx" firstAttribute="leading" secondItem="OdF-Bq-cIU" secondAttribute="leading" id="yD8-jq-2I7"/>
+            </constraints>
+            <point key="canvasLocation" x="207.5" y="114"/>
+        </customView>
+        <userDefaultsController representsSharedInstance="YES" id="IAO-Dw-I0R"/>
+    </objects>
+</document>
