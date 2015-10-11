@@ -57,11 +57,11 @@ enum {
     NSAssert(fOk,@"Empty harmony");
     
     // Key must be in the scale.
-    if (_harmonicStrengths[_key] == kCMusic_outOfKey) {
+    if (_harmonicStrengths[_key] == CMusic_outOfKey) {
         printf("OOPS\n");
     }
     
-    NSAssert(_harmonicStrengths[_key] > kCMusic_outOfKey,@"Key is not in the scale");
+    NSAssert(_harmonicStrengths[_key] > CMusic_outOfKey,@"Key is not in the scale");
     
     return fOk;
 }
@@ -166,7 +166,7 @@ enum {
     CMusicHarmonicStrength hs[CMusicPitchClass_Count];
     
     for (CMusicPitchClass pc = 0; pc < CMusicPitchClass_Count; pc++) {
-        hs[pc] = kCMusic_outOfKey;
+        hs[pc] = CMusic_outOfKey;
     }
     
     CMusicPitchClass pcFromSD[CMusicPitchClass_Count];
@@ -176,7 +176,7 @@ enum {
         pcFromSD[sd++] = pc;
         NSAssert(sd <= CMusicPitchClass_Count, @"CMusic doesn't support scales with more than 12 notes");
         
-        hs[pc] = kCMusic_scaleTone;
+        hs[pc] = CMusic_scaleTone;
     }
     SInt16 scaleToneCount = sd;
     
@@ -186,11 +186,11 @@ enum {
             SInt16 ctsd = SInt16Mod(n.integerValue + chordRootScaleDegree, scaleToneCount);
             SInt16 pc = pcFromSD[ctsd];
             
-            hs[pc] = kCMusic_chordTone;
+            hs[pc] = CMusic_chordTone;
         }
         
         SInt16 pc = pcFromSD[chordRootScaleDegree];
-        hs[pc] = kCMusic_chordRoot;
+        hs[pc] = CMusic_chordRoot;
         
     }
     

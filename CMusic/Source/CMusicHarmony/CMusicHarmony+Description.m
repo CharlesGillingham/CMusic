@@ -48,7 +48,7 @@
 
 - (NSString *) noteName: (CMusicNote) n
 {
-    BOOL isMinor = ([self harmonicStrength:3] >= kCMusic_scaleTone);
+    BOOL isMinor = ([self harmonicStrength:3] >= CMusic_scaleTone);
     return CMusicNoteNameWithKey(n, self.key, isMinor);
 }
 
@@ -61,7 +61,7 @@
 // Specialized in Western Harmony
 - (NSString *) pitchClassName: (CMusicPitchClass) pc
 {
-    BOOL isMinor = ([self harmonicStrength:3] >= kCMusic_scaleTone);
+    BOOL isMinor = ([self harmonicStrength:3] >= CMusic_scaleTone);
     return [NSString stringWithFormat:@"%s", CMusicPitchClassNameWithKey(pc, self.key, isMinor)];
 }
 

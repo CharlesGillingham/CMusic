@@ -17,10 +17,10 @@ enum {
 };
 
 enum {
-    kCMusic_outOfKey  = 0,
-    kCMusic_scaleTone = 1,
-    kCMusic_chordTone = 2,
-    kCMusic_chordRoot = 3
+    CMusic_outOfKey  = 0,
+    CMusic_scaleTone = 1,
+    CMusic_chordTone = 2,
+    CMusic_chordRoot = 3
     
 };
 

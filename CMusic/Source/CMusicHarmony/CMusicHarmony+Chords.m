@@ -12,12 +12,12 @@
 @implementation CMusicHarmony (Chords)
 
 - (BOOL) pitchClassIsMemberOfChord: (CMusicPitchClass) pc {
-    return ([self harmonicStrength:pc] >= kCMusic_chordTone);
+    return ([self harmonicStrength:pc] >= CMusic_chordTone);
 }
 
 
 - (BOOL) pitchClassIsChordRoot: (CMusicPitchClass) pc {
-    return ([self harmonicStrength:pc] >= kCMusic_chordRoot);
+    return ([self harmonicStrength:pc] >= CMusic_chordRoot);
 }
 
 
@@ -35,7 +35,7 @@
 {
     NSUInteger cnt = 0;
     for (CMusicPitchClass pc = 0; pc < CMusicPitchClass_Count; pc++) {
-        if ([self harmonicStrength:pc] >= kCMusic_chordRoot) cnt++;
+        if ([self harmonicStrength:pc] >= CMusic_chordRoot) cnt++;
     }
     return cnt;
 }
@@ -45,7 +45,7 @@
 - (CMusicPitchClass) chordRootPitchClass
 {
     for (CMusicPitchClass pc = 0; pc < CMusicPitchClass_Count; pc++) {
-        if ([self harmonicStrength:pc] >= kCMusic_chordRoot) {
+        if ([self harmonicStrength:pc] >= CMusic_chordRoot) {
             return pc;
         }
     }

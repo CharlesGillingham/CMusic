@@ -48,10 +48,6 @@ enum {
 };
 
 
-
-
-
-
 // These are the four types of triads, defined in terms of pitchClass distances.
 typedef SInt16 CMusicChordType;
 enum {

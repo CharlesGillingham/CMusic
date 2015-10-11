@@ -23,7 +23,7 @@ For example, if the scale is C major and the chord is C major, the harmonic stre
 Harmonic strengh is intended to capture the essential harmonic information. Notes with high harmonic strength are more likely to be played than notes with low harmonic strength. Notes with high harmonic strength tend to occur at moments of high "time strength" (see below) such as down beats.
 
 ###ScaleDegree / ScaleDegree space (CMusicHarmony+Scale.h)
-CMusicHarmony will map notes into "scale degree space", where every note is unique combination of "scale degree" and "accidental". E.g., in the key of C Major, each "white key" has a unique number, and the black keys are mapped to a scale degree + the accidental: i.e. the number of sharps needed to reach the note.
+Map the notes into "scale degrees". Every note has unique combination of "scale degree" and "accidental". The scale degree is incremented on each member of the scale. The accidental is the number of sharps to the note from the pitch class of the scale degree. The scale degree of the key (in octave 0) is 0.
 
 ###Other harmonic properties
 CMusicHarmony also has these convenience properties:

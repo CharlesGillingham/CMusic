@@ -13,7 +13,7 @@
 @implementation CMusicHarmony (Scales)
 
 - (BOOL) pitchClassIsMemberOfScale: (CMusicPitchClass) pc {
-    return ([self harmonicStrength:pc] >= kCMusic_scaleTone);
+    return ([self harmonicStrength:pc] >= CMusic_scaleTone);
 }
 
 
