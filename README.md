@@ -49,7 +49,7 @@ CMusicWesternHarmony has these convenience properties:
 - scale mode
 - number 
 
-All properties of CMusicHarmony and CMusicWesternHarmony 
+All properties of CMusicHarmony and CMusicWesternHarmony are KVC-compliant.
 
 ####Names and descriptions
 
