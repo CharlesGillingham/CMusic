@@ -10,6 +10,8 @@
 		362FF0411BC9C54E001EA833 /* CMusicHarmony .m in Sources */ = {isa = PBXBuildFile; fileRef = 362FF0401BC9C54E001EA833 /* CMusicHarmony .m */; };
 		362FF0431BC9C566001EA833 /* CMusicHarmony+KVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 362FF0421BC9C566001EA833 /* CMusicHarmony+KVC.m */; };
 		362FF0451BC9C5B7001EA833 /* CMusicWesternHarmonyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 362FF0441BC9C5B7001EA833 /* CMusicWesternHarmonyViewController.xib */; };
+		362FF98D1BC9EBE6001EA833 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 362FF98B1BC9EBE6001EA833 /* README.md */; };
+		362FF98E1BC9EBE6001EA833 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 362FF98C1BC9EBE6001EA833 /* License.txt */; };
 		36F29C7A1BC89C2F00AF8CAF /* CMusic.h in Headers */ = {isa = PBXBuildFile; fileRef = 36F29C791BC89C2F00AF8CAF /* CMusic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36F29C801BC89C2F00AF8CAF /* CMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36F29C741BC89C2F00AF8CAF /* CMusic.framework */; };
 		36F29C9F1BC8A97000AF8CAF /* CMusicHarmony+Chords.h in Headers */ = {isa = PBXBuildFile; fileRef = 36F29C911BC8A97000AF8CAF /* CMusicHarmony+Chords.h */; };
@@ -78,6 +80,8 @@
 		362FF0401BC9C54E001EA833 /* CMusicHarmony .m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CMusicHarmony .m"; sourceTree = "<group>"; };
 		362FF0421BC9C566001EA833 /* CMusicHarmony+KVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CMusicHarmony+KVC.m"; sourceTree = "<group>"; };
 		362FF0441BC9C5B7001EA833 /* CMusicWesternHarmonyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMusicWesternHarmonyViewController.xib; sourceTree = "<group>"; };
+		362FF98B1BC9EBE6001EA833 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		362FF98C1BC9EBE6001EA833 /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 		36F29C741BC89C2F00AF8CAF /* CMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36F29C781BC89C2F00AF8CAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36F29C791BC89C2F00AF8CAF /* CMusic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMusic.h; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 		36F29C6A1BC89C2F00AF8CAF = {
 			isa = PBXGroup;
 			children = (
+				362FF98B1BC9EBE6001EA833 /* README.md */,
+				362FF98C1BC9EBE6001EA833 /* License.txt */,
 				36F29CD71BC8AA7E00AF8CAF /* CGUI */,
 				36F29C761BC89C2F00AF8CAF /* CMusic */,
 				36F29C831BC89C2F00AF8CAF /* CMusicTests */,
@@ -532,6 +538,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				362FF0451BC9C5B7001EA833 /* CMusicWesternHarmonyViewController.xib in Resources */,
+				362FF98E1BC9EBE6001EA833 /* License.txt in Resources */,
 				36F29CE61BC8AA7E00AF8CAF /* CSliderTableViewController.xib in Resources */,
 				36F29CE71BC8AA7E00AF8CAF /* CSliderTableViewController2.xib in Resources */,
 				36F29CE11BC8AA7E00AF8CAF /* CSliderTable Notes.rtf in Resources */,
@@ -556,6 +563,7 @@
 				36F29CCF1BC8A97A00AF8CAF /* CTime.m in Sources */,
 				36F29CD41BC8A98C00AF8CAF /* CTimeMap+TimeString.m in Sources */,
 				36F29CEF1BC8ABB900AF8CAF /* CMusicWesternHarmony+Description.m in Sources */,
+				362FF98D1BC9EBE6001EA833 /* README.md in Sources */,
 				36F29CD01BC8A97A00AF8CAF /* CTimeHierarchy.m in Sources */,
 				36F29CD11BC8A97A00AF8CAF /* CTimeMap.m in Sources */,
 				36F29CC91BC8A97A00AF8CAF /* CMusicNote.m in Sources */,
