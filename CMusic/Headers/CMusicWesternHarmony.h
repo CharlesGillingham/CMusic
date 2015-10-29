@@ -42,7 +42,7 @@ enum {
 };
 
 enum {
-    CMusicScaleMode_Min   = 0, // Just to emphasize this is zero based, unlike common practice
+    CMusicScaleMode_Min    = 0, // Just to emphasize this is zero based, unlike common practice
     CMusicWScaleMode_Count = 8, // The maximum number of modes for any western scale (actual count varies by type)
     CMusicWScaleMode_Max   = 7  // The maximum mode of any scale.
 };
